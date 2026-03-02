@@ -31,7 +31,7 @@ THE TREASURER REFUSES TO COMMENT ON THE DISCREPENCIES.`,
   },
   {
     id: 'ambass',
-    title: '4. Ambassadors',
+    title: '4. Partnership',
     image: null,
     content: `DIPLOMATIC CABLES INTERCEPTED.
 AMBASSADOR [REDACTED] REPORTED AT [REDACTED] EMBASSY AT 0300 HOURS.
