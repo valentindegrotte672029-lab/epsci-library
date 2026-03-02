@@ -1,0 +1,289 @@
+import { useState } from 'react';
+import './index.css';
+
+const FOLDERS = [
+  {
+    id: 'presidence',
+    title: '1. Présidence',
+    image: null,
+    content: `[REDACTED] OPERATION "RELEASE ALL THE FILES".
+SUBJECT HAS MOBILIZED A LARGE CROWD FOR INTRO TROMBI.
+TENSIONS EXTREMELY HIGH. VISUAL [REDACTED] CONFIRM PANCARTE DEPLOYED AT SCENE.`,
+  },
+  {
+    id: 'secret',
+    title: '2. Secret',
+    image: null,
+    content: `THE "LITTLE BLACK BOOK" HAS BEEN RECOVERED.
+EXTENSIVE REDACTIONS APPLIED TO PROTECT THE INNOCENT (AND GUILTY).
+[REDACTED] [REDACTED] 555-0199 [REDACTED]
+[REDACTED] - PARIS RESIDENCE [REDACTED]
+[REDACTED] MET WITH [REDACTED] ON DEC 14TH.`,
+  },
+  {
+    id: 'treso',
+    title: '3. Tréso',
+    image: null,
+    content: `INVESTIGATION INTO FINANCIAL FRAUD AND SYSTEMIC EMBEZZLEMENT.
+FUNDS MISSING: EUROS [REDACTED],000,000.
+ACCOUNTS ROUTED THROUGH [REDACTED] AND CAYMAN SHELL CORPS.
+THE TREASURER REFUSES TO COMMENT ON THE DISCREPENCIES.`,
+  },
+  {
+    id: 'ambass',
+    title: '4. Ambass',
+    image: null,
+    content: `DIPLOMATIC CABLES INTERCEPTED.
+AMBASSADOR [REDACTED] REPORTED AT [REDACTED] EMBASSY AT 0300 HOURS.
+NO RECORD OF OFFICIAL BUSINESS WAS FILED. [REDACTED] WAS SEEN LEAVING.`,
+  },
+  {
+    id: 'comm',
+    title: '5. Comm',
+    image: null,
+    content: `UNAUTHORIZED BROADCASTS AND BACKCHANNEL COMMUNICATIONS LOGGED.
+THE COMM TEAM HAS DENIED INVOLVEMENT IN LEAING THE [REDACTED] SECRETS.
+ALL CHANNELS CURRENTLY MONITORED BY THE DEPARTMENT OF CERGY.`,
+  },
+  {
+    id: 'event',
+    title: '6. Event',
+    image: null,
+    content: `GUEST LIST FOR EXCLUSIVE "WHITE PARTY".
+ATTENDEES INCLUDED: [REDACTED], [REDACTED], AND P-DIDDY.
+CATERING INVOICE REDACTED BY ORDER OF [REDACTED].
+SECURITY FOOTAGE WIPED FROM SERVERS AT 04:30 AM.`,
+  },
+  {
+    id: 'anim',
+    title: '7. Anim',
+    image: '/images/island.jpg',
+    content: `ANIMATION CREW DEPLOYED TO [REDACTED] ISLAND.
+LOGS INDICATE PROLONGED STAY WITH NO OFFICIAL EXPLANATION GIVEN.
+[REDACTED] OVERSAW THE HELICOPTER TRANSFERS.
+SUBJECT WAS SEEN WEARING [REDACTED] ON THE PREMISES.`,
+  },
+  {
+    id: 'logi',
+    title: '8. Logi',
+    image: null,
+    content: `LOGISTICS SUPPLY CHAIN HEAVILY COMPROMISED.
+UNMARKED CRATES TRANSPORTED VIA NIGHT HAULS.
+INVENTORY LIST OMITTED: [REDACTED], [REDACTED], [REDACTED].
+ALL TRUCK DRIVERS HAVE SIGNED NDA PROTOCOLS EXCEEDING STANDARD CLEARANCE.`,
+  },
+  {
+    id: 'travel',
+    title: '9. Travel',
+    image: '/images/flight.jpg',
+    content: `FLIGHT LOGS FOR "LOLITA EXPRESS" ACQUIRED.
+NUMEROUS ENTRIES DELETED PRIOR TO SEIZURE.
+PROMINENT PASSENGERS INCLUDED: [REDACTED], [REDACTED], AND BILL CLINTON (NO DENIAL ISSUED).
+DESTINATION: [REDACTED] STRIP, [REDACTED] ISLAND.`,
+  },
+  {
+    id: 'is',
+    title: '10. IS',
+    image: null,
+    content: `INFORMATION SYSTEMS AUDIT FAILED.
+CYBER SECURITY BREACH ON MAINFRAME [REDACTED].
+WIPER MALWARE FOUND IN SYSTEMS BELONGING TO [REDACTED].
+ALL BACKUPS DESTROYED BEFORE AGENTS COULD SECURE THE PREMISES.`,
+  },
+];
+
+const parseRedacted = (text) => {
+  return text.split('([REDACTED])').map((part) => {
+    if (text.includes('[REDACTED]') && part.length === 0) return null;
+
+    const regex = /(\[REDACTED\])/g;
+    const segments = text.split(regex);
+
+    return segments.map((seg, i) => {
+      if (seg === '[REDACTED]') {
+        return <span key={i} className="redacted" title="Classified Information">██████</span>;
+      }
+      return <span key={i}>{seg}</span>;
+    });
+  })[0];
+};
+
+function App() {
+  const [viewedFolders, setViewedFolders] = useState([]);
+  const [activeFolder, setActiveFolder] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [showRiddle, setShowRiddle] = useState(false);
+  const [riddleAnswer, setRiddleAnswer] = useState('');
+  const [riddleSolved, setRiddleSolved] = useState(false);
+
+  const handleFolderClick = (folder) => {
+    setActiveFolder(folder);
+    if (!viewedFolders.includes(folder.id)) {
+      const newViewed = [...viewedFolders, folder.id];
+      setViewedFolders(newViewed);
+
+      if (newViewed.length === FOLDERS.length) {
+        setTimeout(() => {
+          setShowRiddle(true);
+        }, 1500);
+      }
+    }
+  };
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredFolders = FOLDERS.filter(f =>
+    f.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const handleRiddleSubmit = (e) => {
+    e.preventDefault();
+    if (riddleAnswer.toLowerCase().trim() === 'cergy' || riddleAnswer.toLowerCase().trim() === 'epstein') {
+      setRiddleSolved(true);
+      // Create a temporary link to download the PDF
+      const link = document.createElement('a');
+      link.href = '/chapter4.pdf'; // Reference the file in public/
+      link.download = 'classified_document.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      alert("Code Incorrect. L'accès est refusé.");
+    }
+  };
+
+  return (
+    <>
+      <div className="gov-banner">
+        <span>🇺🇸 An official website of the United States government</span>
+        <a href="#">Here's how you know ⌄</a>
+      </div>
+
+      <header className="header">
+        <div className="header-left">
+          <img src="/images/logo.png" alt="Department Logo" className="header-logo" onError={(e) => { e.target.style.display = 'none' }} />
+          <div className="header-title-container">
+            <span className="header-agency">U.S. Department of Justice</span>
+            <span className="header-title">EPSCI Department of CERGY</span>
+          </div>
+        </div>
+      </header>
+
+      <div className="search-section">
+        <div className="search-container">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search"
+            value={searchTerm}
+            onChange={handleSearch}
+          />
+          <button className="search-button" aria-label="Search">
+            <svg className="search-button-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div className="page-title-section">
+        <h1 className="page-title">Epsci Library</h1>
+        <div className="page-divider"></div>
+      </div>
+
+      <main className="content-wrapper">
+        <div className="folders-grid">
+          {filteredFolders.map((folder) => (
+            <div
+              key={folder.id}
+              className="folder-card"
+              onClick={() => handleFolderClick(folder)}
+            >
+              <div className="folder-icon">
+                {viewedFolders.includes(folder.id) ? '📂' : '📁'}
+              </div>
+              <div className="folder-info">
+                <h3 className="folder-name">{folder.title}</h3>
+                <div className={"folder-status " + (viewedFolders.includes(folder.id) ? 'viewed' : '')}>
+                  {viewedFolders.includes(folder.id) ? 'Status: Reviewed' : 'Status: Classified'}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        {filteredFolders.length === 0 && (
+          <div style={{ textAlign: 'center', marginTop: '2rem', color: '#6b7280' }}>
+            No records found matching your query.
+          </div>
+        )}
+      </main>
+
+      <footer className="footer">
+        © 2026 EPSCI Department of CERGY. All rights reserved. Do not distribute classified materials.
+      </footer>
+
+      {activeFolder && (
+        <div className="modal-overlay" onClick={() => setActiveFolder(null)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <div className="modal-header">
+              <span className="modal-title">DOC REF: EPSCI-{activeFolder.id.toUpperCase()}-001</span>
+              <button className="close-btn" onClick={() => setActiveFolder(null)}>×</button>
+            </div>
+            <div className="modal-body">
+              <div className="document-header">
+                <div className="classification">TOP SECRET / NOFORN</div>
+                <div>DECLASSIFIED BY AUTHORIZED PERSONNEL ONLY</div>
+              </div>
+
+              <div style={{ whiteSpace: 'pre-line' }}>
+                {parseRedacted(activeFolder.content)}
+              </div>
+
+              {activeFolder.image && (
+                <div className="doc-image-container">
+                  <img src={activeFolder.image} alt="Evidence" className="doc-image" onError={(e) => {
+                    e.target.parentNode.style.display = 'none';
+                  }} />
+                  <p style={{ fontSize: '0.8rem', color: '#666', marginTop: '0.5rem', fontFamily: 'sans-serif' }}>
+                    EXHIBIT A: PHOTOGRAPHIC EVIDENCE
+                  </p>
+                </div>
+              )}
+
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showRiddle && !riddleSolved && (
+        <div className="riddle-overlay">
+          <div className="riddle-container">
+            <h2 className="riddle-title">A FINAL ENIGMA</h2>
+            <p className="riddle-text">
+              The truth is obscured, but the pieces remain.<br />
+              (The final riddle will be provided later. Enter "cergy" to proceed.)
+            </p>
+            <form onSubmit={handleRiddleSubmit}>
+              <input
+                type="text"
+                className="riddle-input"
+                placeholder="ENTER DECRYPTION KEY"
+                value={riddleAnswer}
+                onChange={(e) => setRiddleAnswer(e.target.value)}
+                autoFocus
+              />
+              <br />
+              <button type="submit" className="riddle-submit">
+                DECRYPT TRANSMISSION
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+export default App;

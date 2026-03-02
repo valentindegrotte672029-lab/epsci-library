@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+:root {
+  --doj-blue: #0E2954;
+  --doj-light-blue: #1A4B96;
+  --doj-gold: #F5B041;
+  --doj-light-gray: #F4F4F4;
+  --doj-border: #D1D5DB;
+  --text-dark: #2F3640;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  background-color: white;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+.serif {
+  font-family: 'Merriweather', serif;
+}
+
+/* TOP BANNER (US Gov Official Site Strip) */
+.gov-banner {
+  background-color: #F0F0F0;
+  padding: 0.25rem 1rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.gov-banner img {
+  height: 12px;
+  margin-right: 8px;
+}
+
+.gov-banner a {
+  color: #005EA2;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+/* MAIN HEADER */
+.header {
+  background-color: var(--doj-blue);
+  color: white;
+  padding: 0 1rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 150px;
+  width: auto;
+  margin-right: 1.5rem;
+  object-fit: contain;
+}
+
+.header-title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-agency {
+  font-size: 0.9rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header-title {
+  font-size: 2.2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: -5px;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.hamburger-line {
+  width: 30px;
+  height: 3px;
+  background-color: var(--doj-gold);
+}
+
+.menu-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* SEARCH BAR SECTION */
+.search-section {
+  background-color: var(--doj-light-blue);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-button {
+  background-color: var(--doj-gold);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--doj-blue);
+}
+
+/* PAGE TITLE */
+.page-title-section {
+  max-width: 1200px;
+  margin: 2rem auto 1rem;
+  padding: 0 1rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: var(--doj-blue);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.page-divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--doj-gold);
+  margin-bottom: 2rem;
+}
+
+/* CONTENT GRID */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+.folders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.folder-card {
+  background: white;
+  border: 1px solid var(--doj-border);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid var(--doj-blue);
+}
+
+.folder-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--doj-gold);
+}
+
+.folder-icon {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--doj-gold);
+}
+
+.folder-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.folder-name {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--doj-light-blue);
+}
+
+.folder-status {
+  font-size: 0.85rem;
+  color: #6B7280;
+  margin-top: 0.25rem;
+}
+
+.folder-status.viewed {
+  color: #B5121B;
+  font-weight: 600;
+}
+
+/* Modal / Document Viewer */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #FDFBF7;
+  width: 90%;
+  max-width: 800px;
+  height: 85vh;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid var(--text-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.modal-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+.modal-body {
+  padding: 2rem;
+  overflow-y: auto;
+  flex: 1;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.document-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 1rem;
+}
+
+.classification {
+  color: #B5121B;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 4px;
+}
+
+.redacted {
+  background-color: black;
+  color: black;
+  padding: 0 4px;
+  user-select: none;
+  display: inline-block;
+  min-width: 40px;
+}
+
+.doc-image-container {
+  margin: 2rem 0;
+  text-align: center;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.doc-image {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(80%) contrast(1.2);
+}
+
+/* Final Riddle Envelope */
+.riddle-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, var(--doj-blue), #000);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.riddle-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4rem;
+  text-align: center;
+  max-width: 800px;
+}
+
+.riddle-title {
+  color: var(--doj-gold);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Merriweather', serif;
+}
+
+.riddle-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+.riddle-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--doj-gold);
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 1.5rem;
+}
+
+.riddle-input:focus {
+  outline: none;
+  border-color: white;
+}
+
+.riddle-submit {
+  background: var(--doj-gold);
+  color: var(--doj-blue);
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--doj-light-gray);
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--doj-border);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .header-logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .header-agency {
+    font-size: 0.7rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+}
