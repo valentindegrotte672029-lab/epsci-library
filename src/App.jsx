@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import './index.css';
 
 const FOLDERS = [
@@ -282,6 +283,7 @@ function App() {
           </div>
         </div>
       )}
+      <Analytics />
     </>
   );
 }
