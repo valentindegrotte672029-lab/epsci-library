@@ -4,7 +4,7 @@ import './index.css';
 const FOLDERS = [
   {
     id: 'presidence',
-    title: '1. Présidence',
+    title: '1. Presidency',
     image: null,
     content: `[REDACTED] OPERATION "RELEASE ALL THE FILES".
 SUBJECT HAS MOBILIZED A LARGE CROWD FOR INTRO TROMBI.
@@ -12,7 +12,7 @@ TENSIONS EXTREMELY HIGH. VISUAL [REDACTED] CONFIRM PANCARTE DEPLOYED AT SCENE.`,
   },
   {
     id: 'secret',
-    title: '2. Secret',
+    title: '2. Secretary',
     image: null,
     content: `THE "LITTLE BLACK BOOK" HAS BEEN RECOVERED.
 EXTENSIVE REDACTIONS APPLIED TO PROTECT THE INNOCENT (AND GUILTY).
@@ -22,7 +22,7 @@ EXTENSIVE REDACTIONS APPLIED TO PROTECT THE INNOCENT (AND GUILTY).
   },
   {
     id: 'treso',
-    title: '3. Tréso',
+    title: '3. Treasury',
     image: null,
     content: `INVESTIGATION INTO FINANCIAL FRAUD AND SYSTEMIC EMBEZZLEMENT.
 FUNDS MISSING: EUROS [REDACTED],000,000.
@@ -31,7 +31,7 @@ THE TREASURER REFUSES TO COMMENT ON THE DISCREPENCIES.`,
   },
   {
     id: 'ambass',
-    title: '4. Ambass',
+    title: '4. Ambassadors',
     image: null,
     content: `DIPLOMATIC CABLES INTERCEPTED.
 AMBASSADOR [REDACTED] REPORTED AT [REDACTED] EMBASSY AT 0300 HOURS.
@@ -39,7 +39,7 @@ NO RECORD OF OFFICIAL BUSINESS WAS FILED. [REDACTED] WAS SEEN LEAVING.`,
   },
   {
     id: 'comm',
-    title: '5. Comm',
+    title: '5. Communications',
     image: null,
     content: `UNAUTHORIZED BROADCASTS AND BACKCHANNEL COMMUNICATIONS LOGGED.
 THE COMM TEAM HAS DENIED INVOLVEMENT IN LEAING THE [REDACTED] SECRETS.
@@ -47,7 +47,7 @@ ALL CHANNELS CURRENTLY MONITORED BY THE DEPARTMENT OF CERGY.`,
   },
   {
     id: 'event',
-    title: '6. Event',
+    title: '6. Events',
     image: null,
     content: `GUEST LIST FOR EXCLUSIVE "WHITE PARTY".
 ATTENDEES INCLUDED: [REDACTED], [REDACTED], AND P-DIDDY.
@@ -56,7 +56,7 @@ SECURITY FOOTAGE WIPED FROM SERVERS AT 04:30 AM.`,
   },
   {
     id: 'anim',
-    title: '7. Anim',
+    title: '7. Animation',
     image: '/images/island.jpg',
     content: `ANIMATION CREW DEPLOYED TO [REDACTED] ISLAND.
 LOGS INDICATE PROLONGED STAY WITH NO OFFICIAL EXPLANATION GIVEN.
@@ -65,7 +65,7 @@ SUBJECT WAS SEEN WEARING [REDACTED] ON THE PREMISES.`,
   },
   {
     id: 'logi',
-    title: '8. Logi',
+    title: '8. Logistics',
     image: null,
     content: `LOGISTICS SUPPLY CHAIN HEAVILY COMPROMISED.
 UNMARKED CRATES TRANSPORTED VIA NIGHT HAULS.
