@@ -134,8 +134,12 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
+  const normalizeString = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  };
+
   const filteredFolders = FOLDERS.filter(f =>
-    f.title.toLowerCase().includes(searchTerm.toLowerCase())
+    normalizeString(f.title).includes(normalizeString(searchTerm))
   );
 
   const handleRiddleSubmit = (e) => {
@@ -189,7 +193,7 @@ function App() {
       </div>
 
       <div className="page-title-section">
-        <h1 className="page-title">Epsci Library</h1>
+        <h1 className="page-title">Epsci Files</h1>
         <div className="page-divider"></div>
       </div>
 
