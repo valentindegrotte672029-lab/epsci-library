@@ -6,6 +6,7 @@ const FOLDERS = [
     id: 'presidence',
     title: '1. Presidency',
     image: null,
+    pdfPage: 2,
     content: `[REDACTED] OPERATION "RELEASE ALL THE FILES".
 SUBJECT HAS MOBILIZED A LARGE CROWD FOR INTRO TROMBI.
 TENSIONS EXTREMELY HIGH. VISUAL [REDACTED] CONFIRM PANCARTE DEPLOYED AT SCENE.`,
@@ -14,6 +15,7 @@ TENSIONS EXTREMELY HIGH. VISUAL [REDACTED] CONFIRM PANCARTE DEPLOYED AT SCENE.`,
     id: 'secret',
     title: '2. Secretary',
     image: null,
+    pdfPage: 3,
     content: `THE "LITTLE BLACK BOOK" HAS BEEN RECOVERED.
 EXTENSIVE REDACTIONS APPLIED TO PROTECT THE INNOCENT (AND GUILTY).
 [REDACTED] [REDACTED] 555-0199 [REDACTED]
@@ -24,6 +26,7 @@ EXTENSIVE REDACTIONS APPLIED TO PROTECT THE INNOCENT (AND GUILTY).
     id: 'treso',
     title: '3. Treasury',
     image: null,
+    pdfPage: 4,
     content: `INVESTIGATION INTO FINANCIAL FRAUD AND SYSTEMIC EMBEZZLEMENT.
 FUNDS MISSING: EUROS [REDACTED],000,000.
 ACCOUNTS ROUTED THROUGH [REDACTED] AND CAYMAN SHELL CORPS.
@@ -33,6 +36,7 @@ THE TREASURER REFUSES TO COMMENT ON THE DISCREPENCIES.`,
     id: 'ambass',
     title: '4. Partnership',
     image: null,
+    pdfPage: 5,
     content: `DIPLOMATIC CABLES INTERCEPTED.
 AMBASSADOR [REDACTED] REPORTED AT [REDACTED] EMBASSY AT 0300 HOURS.
 NO RECORD OF OFFICIAL BUSINESS WAS FILED. [REDACTED] WAS SEEN LEAVING.`,
@@ -41,6 +45,7 @@ NO RECORD OF OFFICIAL BUSINESS WAS FILED. [REDACTED] WAS SEEN LEAVING.`,
     id: 'comm',
     title: '5. Communications',
     image: null,
+    pdfPage: 6,
     content: `UNAUTHORIZED BROADCASTS AND BACKCHANNEL COMMUNICATIONS LOGGED.
 THE COMM TEAM HAS DENIED INVOLVEMENT IN LEAING THE [REDACTED] SECRETS.
 ALL CHANNELS CURRENTLY MONITORED BY THE DEPARTMENT OF CERGY.`,
@@ -49,6 +54,7 @@ ALL CHANNELS CURRENTLY MONITORED BY THE DEPARTMENT OF CERGY.`,
     id: 'event',
     title: '6. Events',
     image: null,
+    pdfPage: 7,
     content: `GUEST LIST FOR EXCLUSIVE "WHITE PARTY".
 ATTENDEES INCLUDED: [REDACTED], [REDACTED], AND P-DIDDY.
 CATERING INVOICE REDACTED BY ORDER OF [REDACTED].
@@ -58,6 +64,7 @@ SECURITY FOOTAGE WIPED FROM SERVERS AT 04:30 AM.`,
     id: 'anim',
     title: '7. Animation',
     image: '/images/island.jpg',
+    pdfPage: 8,
     content: `ANIMATION CREW DEPLOYED TO [REDACTED] ISLAND.
 LOGS INDICATE PROLONGED STAY WITH NO OFFICIAL EXPLANATION GIVEN.
 [REDACTED] OVERSAW THE HELICOPTER TRANSFERS.
@@ -67,6 +74,7 @@ SUBJECT WAS SEEN WEARING [REDACTED] ON THE PREMISES.`,
     id: 'logi',
     title: '8. Logistics',
     image: null,
+    pdfPage: 9,
     content: `LOGISTICS SUPPLY CHAIN HEAVILY COMPROMISED.
 UNMARKED CRATES TRANSPORTED VIA NIGHT HAULS.
 INVENTORY LIST OMITTED: [REDACTED], [REDACTED], [REDACTED].
@@ -76,6 +84,7 @@ ALL TRUCK DRIVERS HAVE SIGNED NDA PROTOCOLS EXCEEDING STANDARD CLEARANCE.`,
     id: 'travel',
     title: '9. Travel',
     image: '/images/flight.jpg',
+    pdfPage: 10,
     content: `FLIGHT LOGS FOR "LOLITA EXPRESS" ACQUIRED.
 NUMEROUS ENTRIES DELETED PRIOR TO SEIZURE.
 PROMINENT PASSENGERS INCLUDED: [REDACTED], [REDACTED], AND BILL CLINTON (NO DENIAL ISSUED).
@@ -85,10 +94,21 @@ DESTINATION: [REDACTED] STRIP, [REDACTED] ISLAND.`,
     id: 'is',
     title: '10. IS',
     image: null,
+    pdfPage: 11,
     content: `INFORMATION SYSTEMS AUDIT FAILED.
 CYBER SECURITY BREACH ON MAINFRAME [REDACTED].
 WIPER MALWARE FOUND IN SYSTEMS BELONGING TO [REDACTED].
 ALL BACKUPS DESTROYED BEFORE AGENTS COULD SECURE THE PREMISES.`,
+  },
+  {
+    id: 'summary',
+    title: '11. Summary',
+    image: null,
+    pdfPage: null,
+    content: `FINAL DOSSIER COMPILED.
+ALL PREVIOUS FILES HAVE BEEN CONSOLIDATED INTO THE MASTER SUMMARY REPORT.
+PROCEED TO REVIEW THE FULL DECLASSIFIED DOCUMENT.
+[REDACTED] IS WATCHING.`,
   },
 ];
 
@@ -255,6 +275,29 @@ function App() {
                   </p>
                 </div>
               )}
+
+              <div style={{ marginTop: '2rem', textAlign: 'center', borderTop: '1px solid #eee', paddingTop: '1rem' }}>
+                <a
+                  href={`/chapter4.pdf${activeFolder.pdfPage ? `#page=${activeFolder.pdfPage}` : ''}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    padding: '0.75rem 1.5rem',
+                    backgroundColor: 'var(--doj-blue)',
+                    color: 'white',
+                    textDecoration: 'none',
+                    fontWeight: 'bold',
+                    fontSize: '0.9rem',
+                    letterSpacing: '1px',
+                    border: '1px solid #111'
+                  }}
+                >
+                  {activeFolder.pdfPage
+                    ? `[ EXAMINE ORIGINAL DOCUMENT - PAGE ${activeFolder.pdfPage} ]`
+                    : '[ EXAMINE FULL MASTER DOCUMENT ]'}
+                </a>
+              </div>
 
             </div>
           </div>
