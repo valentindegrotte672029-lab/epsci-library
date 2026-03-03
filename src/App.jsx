@@ -59,10 +59,10 @@ MEANING INTERPRETED [REDACTED].
     title: '6. Events',
     image: null,
     pdfPage: 7,
-    content: `EVENT : EPSTEIN X P-DIDDY
-WHITE PARTY & DIDDY PLANNED
-ONLY WHITE CLOTHES AUTHORIZED
-XAVIER DUPONT DE LIGONNÈS SPAWNING`,
+    content: `EVENT : [REDACTED] X P-DIDDY
+[REDACTED] PARTY & DIDDY PLANNED
+ONLY [REDACTED] CLOTHES AUTHORIZED
+[REDACTED] DUPONT DE LIGONNÈS SPAWNING`,
   },
   {
     id: 'anim',
@@ -268,18 +268,7 @@ function App() {
                 {parseRedacted(activeFolder.content)}
               </div>
 
-              {activeFolder.image && (
-                <div className="doc-image-container">
-                  <img src={activeFolder.image} alt="Evidence" className="doc-image" onError={(e) => {
-                    e.target.parentNode.style.display = 'none';
-                  }} />
-                  <p style={{ fontSize: '0.8rem', color: '#666', marginTop: '0.5rem', fontFamily: 'sans-serif' }}>
-                    EXHIBIT A: PHOTOGRAPHIC EVIDENCE
-                  </p>
-                </div>
-              )}
-
-              <div style={{ marginTop: '2rem', textAlign: 'center', borderTop: '1px solid #eee', paddingTop: '1rem' }}>
+              <div style={{ marginTop: '2rem', textAlign: 'center', borderTop: '1px solid #eee', paddingTop: '1rem', paddingBottom: '2rem' }}>
                 <a
                   href={`/chapter4.pdf${activeFolder.pdfPage ? `#page=${activeFolder.pdfPage}` : ''}`}
                   target="_blank"
@@ -301,6 +290,17 @@ function App() {
                     : '[ EXAMINE FULL MASTER DOCUMENT ]'}
                 </a>
               </div>
+
+              {activeFolder.image && (
+                <div className="doc-image-container">
+                  <img src={activeFolder.image} alt="Evidence" className="doc-image" onError={(e) => {
+                    e.target.parentNode.style.display = 'none';
+                  }} />
+                  <p style={{ fontSize: '0.8rem', color: '#666', marginTop: '0.5rem', fontFamily: 'sans-serif' }}>
+                    EXHIBIT A: PHOTOGRAPHIC EVIDENCE
+                  </p>
+                </div>
+              )}
 
             </div>
           </div>
