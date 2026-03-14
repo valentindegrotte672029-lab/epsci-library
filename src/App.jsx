@@ -6,8 +6,7 @@ const FOLDERS = [
     id: 'presidence',
     title: '1. Presidency',
     image: null,
-    pdfPage: 1,
-    pdfUrl: '/epsci-files.pdf',
+    pdfUrl: '/pdfs/presidency.pdf',
     content: `[REDACTED] OPERATION "RELEASE ALL THE FILES".
 SUBJECT HAS MOBILIZED A LARGE CROWD FOR INTRO TROMBI.
 TENSIONS EXTREMELY HIGH. VISUAL [REDACTED] CONFIRM PANCARTE DEPLOYED AT SCENE.`,
@@ -16,8 +15,7 @@ TENSIONS EXTREMELY HIGH. VISUAL [REDACTED] CONFIRM PANCARTE DEPLOYED AT SCENE.`,
     id: 'secret',
     title: '2. Secretary',
     image: null,
-    pdfPage: 2,
-    pdfUrl: '/epsci-files.pdf',
+    pdfUrl: '/pdfs/secretary.pdf',
     content: `THE "LITTLE BLACK OUT" HAS BEEN RECOVERED.
 REGISTRY OF ALL NAMES, NUMBERS, ETC.
 TROMBI [REDACTED] LEAKED
@@ -30,8 +28,7 @@ EXTENSIVE REDACTIONS APPLIED TO PROTECT THE INNOCENT (AND GUILTY).
     id: 'treso',
     title: '3. Treasury',
     image: null,
-    pdfPage: 3,
-    pdfUrl: '/epsci-files.pdf',
+    pdfUrl: '/pdfs/treasury.pdf',
     content: `INVESTIGATION INTO FINANCIAL DISCREPANCIES.
 FUNDS MISSING: € [REDACTED],000,000.
 ACCOUNTS ROUTED THROUGH:
@@ -43,8 +40,7 @@ BALANCE SHEET: WRONG.
     id: 'ambass',
     title: '4. Partnership',
     image: null,
-    pdfPage: 4,
-    pdfUrl: '/epsci-files.pdf',
+    pdfUrl: '/pdfs/partnership.pdf',
     content: `AGREEMENT REACHED FOR [REDACTED] $.
 EXCHANGE CONSIDER [REDACTED] ACCEPTABLE.
 [REDACTED] GOODIES LANDING ON THE ISLAND.
@@ -54,8 +50,7 @@ BABY OIL PURCHASE IN [REDACTED] DAYS.`,
     id: 'comm',
     title: '5. Communications',
     image: null,
-    pdfPage: 5,
-    pdfUrl: '/epsci-files.pdf',
+    pdfUrl: '/pdfs/communications.pdf',
     content: `TEASER [REDACTED] AT 67%.
 MESSAGE SENT [REDACTED].
 MEANING INTERPRETED [REDACTED].
@@ -65,8 +60,7 @@ MEANING INTERPRETED [REDACTED].
     id: 'anim',
     title: '6. Animation',
     image: null,
-    pdfPage: 7,
-    pdfUrl: '/epsci-files.pdf',
+    pdfUrl: '/pdfs/animation.pdf',
     content: `ANIM : [REDACTED] X P-DIDDY
 [REDACTED] PARTY & DIDDY PLANNED
 ONLY [REDACTED] CLOTHES AUTHORIZED
@@ -77,8 +71,7 @@ SIGNAL : TOC TOC TOC`,
     id: 'event',
     title: '7. Events',
     image: null,
-    pdfPage: 6,
-    pdfUrl: '/epsci-files.pdf',
+    pdfUrl: '/pdfs/events.pdf',
     content: `EVENT : EPSTEIN ISLAND ?
 MASSAGE METHOD OPERATIONAL 
 CHAMPAIGNE BOTTLES : [REDACTED]
@@ -88,8 +81,7 @@ CHAMPAIGNE BOTTLES : [REDACTED]
     id: 'logi',
     title: '8. Logistics',
     image: null,
-    pdfPage: 8,
-    pdfUrl: '/epsci-files.pdf',
+    pdfUrl: '/pdfs/logistics.pdf',
     content: `ITEMS MOVED [REDACTED] FROM CERGY.
 LOCATION UPDATED [REDACTED] - 48.237651, -122.894317 WEST.
 LICENSE AND REGISTRATION : STOLEN.`,
@@ -98,8 +90,7 @@ LICENSE AND REGISTRATION : STOLEN.`,
     id: 'travel',
     title: '9. Travel',
     image: null,
-    pdfPage: 9,
-    pdfUrl: '/epsci-files.pdf',
+    pdfUrl: '/pdfs/travel.pdf',
     content: `FLIGHT LOGS FOR "LOLITA EXPRESS" ACQUIRED.
 CELEBRITY BILL CLINTON ONBOARD.
 LEAVING IN [REDACTED] CERGYZONE.
