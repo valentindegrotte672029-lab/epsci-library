@@ -27,7 +27,7 @@ EXTENSIVE REDACTIONS APPLIED TO PROTECT THE INNOCENT (AND GUILTY).
   {
     id: 'treso',
     title: '3. Treasury',
-    image: null,
+    image: '/images/departments/treasury.png',
     pdfPage: 4,
     content: `INVESTIGATION INTO FINANCIAL DISCREPANCIES.
 FUNDS MISSING: € [REDACTED],000,000.
@@ -49,7 +49,7 @@ BABY OIL PURCHASE IN [REDACTED] DAYS.`,
   {
     id: 'comm',
     title: '5. Communications',
-    image: null,
+    image: '/images/departments/communications.png',
     pdfPage: 6,
     content: `TEASER [REDACTED] AT 67%.
 MESSAGE SENT [REDACTED].
@@ -69,7 +69,7 @@ SIGNAL : TOC TOC TOC`,
   {
     id: 'event',
     title: '7. Events',
-    image: null,
+    image: '/images/departments/events.jpg',
     pdfPage: 7,
     content: `EVENT : [REDACTED] X P-DIDDY
 [REDACTED] PARTY & DIDDY PLANNED
@@ -80,7 +80,7 @@ OPEN EPSTEIN LIMOUSIN AT [REDACTED]`,
   {
     id: 'logi',
     title: '8. Logistics',
-    image: null,
+    image: '/images/departments/logistics.jpg',
     pdfPage: 9,
     content: `ITEMS MOVED [REDACTED] FROM CERGY.
 LOCATION UPDATED [REDACTED] - 48.237651, -122.894317 WEST.
