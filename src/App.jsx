@@ -57,8 +57,18 @@ MEANING INTERPRETED [REDACTED].
 [REDACTED] : + 33 7[REDACTED] 23 [REDACTED]8 23 SUSPECT.`,
   },
   {
+    id: 'anim',
+    title: '6. Animation',
+    image: null,
+    pdfPage: 8,
+    content: `ANIM : EPSTEIN ISLAND ?
+MASSAGE METHOD OPERATIONAL 
+CHAMPAIGNE BOTTLES : [REDACTED]
+SIGNAL : TOC TOC TOC`,
+  },
+  {
     id: 'event',
-    title: '6. Events',
+    title: '7. Events',
     image: null,
     pdfPage: 7,
     content: `EVENT : [REDACTED] X P-DIDDY
@@ -66,16 +76,6 @@ MEANING INTERPRETED [REDACTED].
 ONLY [REDACTED] CLOTHES AUTHORIZED
 [REDACTED] DUPONT DE LIGONNÈS SPAWNING
 OPEN EPSTEIN LIMOUSIN AT [REDACTED]`,
-  },
-  {
-    id: 'anim',
-    title: '7. Animation',
-    image: null,
-    pdfPage: 8,
-    content: `ANIM : EPSTEIN ISLAND ?
-MASSAGE METHOD OPERATIONAL 
-CHAMPAIGNE BOTTLES : [REDACTED]
-SIGNAL : TOC TOC TOC`,
   },
   {
     id: 'logi',
