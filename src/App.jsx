@@ -111,8 +111,9 @@ SYSTEMS MONITORING GLOBAL PRESENCE.
     title: '11. Summary',
     image: null,
     pdfPage: null,
+    pdfUrl: '/department_dossier.pdf',
     content: `FINAL DOSSIER COMPILED.
-ALL PREVIOUS FILES HAVE BEEN CONSOLIDATED INTO THE MASTER SUMMARY REPORT.
+ALL DEPARTMENT PHOTOS HAVE BEEN CONSOLIDATED INTO THE MASTER DOSSIER.
 PROCEED TO REVIEW THE FULL DECLASSIFIED DOCUMENT.
 [REDACTED] IS WATCHING.`,
   },
@@ -273,7 +274,7 @@ function App() {
 
               <div style={{ marginTop: '2rem', textAlign: 'center', borderTop: '1px solid #eee', paddingTop: '1rem', paddingBottom: '2rem' }}>
                 <a
-                  href={`/chapter4.pdf${activeFolder.pdfPage ? `#page=${activeFolder.pdfPage}` : ''}`}
+                  href={`${activeFolder.pdfUrl || '/chapter4.pdf'}${activeFolder.pdfPage ? `#page=${activeFolder.pdfPage}` : ''}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
