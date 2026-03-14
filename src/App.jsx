@@ -112,7 +112,7 @@ SYSTEMS MONITORING GLOBAL PRESENCE.
     title: '11. Summary',
     image: null,
     pdfPage: null,
-    pdfUrl: '/epsci-files.pdf',
+    pdfUrl: '/Liste-Tribut-Bouillet.pdf',
     content: `FINAL DOSSIER COMPILED.
 ALL DEPARTMENT PHOTOS HAVE BEEN CONSOLIDATED INTO THE MASTER DOSSIER.
 PROCEED TO REVIEW THE FULL DECLASSIFIED DOCUMENT.
@@ -176,8 +176,8 @@ function App() {
       setRiddleSolved(true);
       // Create a temporary link to download the PDF
       const link = document.createElement('a');
-      link.href = '/final-dossier.pdf'; // Reference the file in public/
-      link.download = 'epsci-files-final.pdf';
+      link.href = '/final-dossier.pdf'; // Use the version in public
+      link.download = 'Liste Tribut-Bouillet.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
