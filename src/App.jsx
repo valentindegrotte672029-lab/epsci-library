@@ -5,7 +5,7 @@ const FOLDERS = [
   {
     id: 'presidence',
     title: '1. Presidency',
-    image: null,
+    image: '/images/departments/presidency.jpg',
     pdfPage: 2,
     content: `[REDACTED] OPERATION "RELEASE ALL THE FILES".
 SUBJECT HAS MOBILIZED A LARGE CROWD FOR INTRO TROMBI.
@@ -14,7 +14,7 @@ TENSIONS EXTREMELY HIGH. VISUAL [REDACTED] CONFIRM PANCARTE DEPLOYED AT SCENE.`,
   {
     id: 'secret',
     title: '2. Secretary',
-    image: null,
+    image: '/images/departments/secretary.jpg',
     pdfPage: 3,
     content: `THE "LITTLE BLACK OUT" HAS BEEN RECOVERED.
 REGISTRY OF ALL NAMES, NUMBERS, ETC.
@@ -39,7 +39,7 @@ BALANCE SHEET: WRONG.
   {
     id: 'ambass',
     title: '4. Partnership',
-    image: null,
+    image: '/images/departments/partnership.jpg',
     pdfPage: 5,
     content: `AGREEMENT REACHED FOR [REDACTED] $.
 EXCHANGE CONSIDER [REDACTED] ACCEPTABLE.
@@ -59,7 +59,7 @@ MEANING INTERPRETED [REDACTED].
   {
     id: 'anim',
     title: '6. Animation',
-    image: null,
+    image: '/images/departments/animation.jpg',
     pdfPage: 8,
     content: `ANIM : EPSTEIN ISLAND ?
 MASSAGE METHOD OPERATIONAL 
@@ -89,7 +89,7 @@ LICENSE AND REGISTRATION : STOLEN.`,
   {
     id: 'travel',
     title: '9. Travel',
-    image: null,
+    image: '/images/departments/travel.jpg',
     pdfPage: 10,
     content: `FLIGHT LOGS FOR "LOLITA EXPRESS" ACQUIRED.
 CELEBRITY BILL CLINTON ONBOARD.
