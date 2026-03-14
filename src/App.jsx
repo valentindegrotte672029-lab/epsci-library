@@ -175,8 +175,8 @@ function App() {
       setRiddleSolved(true);
       // Create a temporary link to download the PDF
       const link = document.createElement('a');
-      link.href = '/chapter4.pdf'; // Reference the file in public/
-      link.download = 'classified_document.pdf';
+      link.href = '/epsci-files.pdf'; // Reference the file in public/
+      link.download = 'epsci-files.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
