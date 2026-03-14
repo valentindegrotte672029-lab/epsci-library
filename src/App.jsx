@@ -5,8 +5,9 @@ const FOLDERS = [
   {
     id: 'presidence',
     title: '1. Presidency',
-    image: '/images/departments/presidency.jpg',
-    pdfPage: 2,
+    image: null,
+    pdfPage: 1,
+    pdfUrl: '/epsci-files.pdf',
     content: `[REDACTED] OPERATION "RELEASE ALL THE FILES".
 SUBJECT HAS MOBILIZED A LARGE CROWD FOR INTRO TROMBI.
 TENSIONS EXTREMELY HIGH. VISUAL [REDACTED] CONFIRM PANCARTE DEPLOYED AT SCENE.`,
@@ -14,8 +15,9 @@ TENSIONS EXTREMELY HIGH. VISUAL [REDACTED] CONFIRM PANCARTE DEPLOYED AT SCENE.`,
   {
     id: 'secret',
     title: '2. Secretary',
-    image: '/images/departments/secretary.jpg',
-    pdfPage: 3,
+    image: null,
+    pdfPage: 2,
+    pdfUrl: '/epsci-files.pdf',
     content: `THE "LITTLE BLACK OUT" HAS BEEN RECOVERED.
 REGISTRY OF ALL NAMES, NUMBERS, ETC.
 TROMBI [REDACTED] LEAKED
@@ -27,8 +29,9 @@ EXTENSIVE REDACTIONS APPLIED TO PROTECT THE INNOCENT (AND GUILTY).
   {
     id: 'treso',
     title: '3. Treasury',
-    image: '/images/departments/treasury.png',
-    pdfPage: 4,
+    image: null,
+    pdfPage: 3,
+    pdfUrl: '/epsci-files.pdf',
     content: `INVESTIGATION INTO FINANCIAL DISCREPANCIES.
 FUNDS MISSING: € [REDACTED],000,000.
 ACCOUNTS ROUTED THROUGH:
@@ -39,8 +42,9 @@ BALANCE SHEET: WRONG.
   {
     id: 'ambass',
     title: '4. Partnership',
-    image: '/images/departments/partnership.jpg',
-    pdfPage: 5,
+    image: null,
+    pdfPage: 4,
+    pdfUrl: '/epsci-files.pdf',
     content: `AGREEMENT REACHED FOR [REDACTED] $.
 EXCHANGE CONSIDER [REDACTED] ACCEPTABLE.
 [REDACTED] GOODIES LANDING ON THE ISLAND.
@@ -49,8 +53,9 @@ BABY OIL PURCHASE IN [REDACTED] DAYS.`,
   {
     id: 'comm',
     title: '5. Communications',
-    image: '/images/departments/communications.png',
-    pdfPage: 6,
+    image: null,
+    pdfPage: 5,
+    pdfUrl: '/epsci-files.pdf',
     content: `TEASER [REDACTED] AT 67%.
 MESSAGE SENT [REDACTED].
 MEANING INTERPRETED [REDACTED].
@@ -59,8 +64,9 @@ MEANING INTERPRETED [REDACTED].
   {
     id: 'anim',
     title: '6. Animation',
-    image: '/images/departments/animation.jpg',
-    pdfPage: 8,
+    image: null,
+    pdfPage: 6,
+    pdfUrl: '/epsci-files.pdf',
     content: `ANIM : EPSTEIN ISLAND ?
 MASSAGE METHOD OPERATIONAL 
 CHAMPAIGNE BOTTLES : [REDACTED]
@@ -69,8 +75,9 @@ SIGNAL : TOC TOC TOC`,
   {
     id: 'event',
     title: '7. Events',
-    image: '/images/departments/events.jpg',
+    image: null,
     pdfPage: 7,
+    pdfUrl: '/epsci-files.pdf',
     content: `EVENT : [REDACTED] X P-DIDDY
 [REDACTED] PARTY & DIDDY PLANNED
 ONLY [REDACTED] CLOTHES AUTHORIZED
@@ -80,8 +87,9 @@ OPEN EPSTEIN LIMOUSIN AT [REDACTED]`,
   {
     id: 'logi',
     title: '8. Logistics',
-    image: '/images/departments/logistics.jpg',
-    pdfPage: 9,
+    image: null,
+    pdfPage: 8,
+    pdfUrl: '/epsci-files.pdf',
     content: `ITEMS MOVED [REDACTED] FROM CERGY.
 LOCATION UPDATED [REDACTED] - 48.237651, -122.894317 WEST.
 LICENSE AND REGISTRATION : STOLEN.`,
@@ -89,8 +97,9 @@ LICENSE AND REGISTRATION : STOLEN.`,
   {
     id: 'travel',
     title: '9. Travel',
-    image: '/images/departments/travel.jpg',
-    pdfPage: 10,
+    image: null,
+    pdfPage: 9,
+    pdfUrl: '/epsci-files.pdf',
     content: `FLIGHT LOGS FOR "LOLITA EXPRESS" ACQUIRED.
 CELEBRITY BILL CLINTON ONBOARD.
 LEAVING IN [REDACTED] CERGYZONE.
@@ -111,7 +120,7 @@ SYSTEMS MONITORING GLOBAL PRESENCE.
     title: '11. Summary',
     image: null,
     pdfPage: null,
-    pdfUrl: '/department_dossier.pdf',
+    pdfUrl: '/epsci-files.pdf',
     content: `FINAL DOSSIER COMPILED.
 ALL DEPARTMENT PHOTOS HAVE BEEN CONSOLIDATED INTO THE MASTER DOSSIER.
 PROCEED TO REVIEW THE FULL DECLASSIFIED DOCUMENT.
