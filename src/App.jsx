@@ -67,11 +67,11 @@ MEANING INTERPRETED [REDACTED].
     image: null,
     pdfPage: 7,
     pdfUrl: '/epsci-files.pdf',
-    content: `EVENT : [REDACTED] X P-DIDDY
+    content: `ANIM : [REDACTED] X P-DIDDY
 [REDACTED] PARTY & DIDDY PLANNED
 ONLY [REDACTED] CLOTHES AUTHORIZED
 [REDACTED] DUPONT DE LIGONNÈS SPAWNING
-OPEN EPSTEIN LIMOUSIN AT [REDACTED]`,
+SIGNAL : TOC TOC TOC`,
   },
   {
     id: 'event',
@@ -79,10 +79,10 @@ OPEN EPSTEIN LIMOUSIN AT [REDACTED]`,
     image: null,
     pdfPage: 6,
     pdfUrl: '/epsci-files.pdf',
-    content: `ANIM : EPSTEIN ISLAND ?
+    content: `EVENT : EPSTEIN ISLAND ?
 MASSAGE METHOD OPERATIONAL 
 CHAMPAIGNE BOTTLES : [REDACTED]
-SIGNAL : TOC TOC TOC`,
+OPEN EPSTEIN LIMOUSIN AT [REDACTED]`,
   },
   {
     id: 'logi',
