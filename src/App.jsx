@@ -65,17 +65,6 @@ MEANING INTERPRETED [REDACTED].
     id: 'anim',
     title: '6. Animation',
     image: null,
-    pdfPage: 6,
-    pdfUrl: '/epsci-files.pdf',
-    content: `ANIM : EPSTEIN ISLAND ?
-MASSAGE METHOD OPERATIONAL 
-CHAMPAIGNE BOTTLES : [REDACTED]
-SIGNAL : TOC TOC TOC`,
-  },
-  {
-    id: 'event',
-    title: '7. Events',
-    image: null,
     pdfPage: 7,
     pdfUrl: '/epsci-files.pdf',
     content: `EVENT : [REDACTED] X P-DIDDY
@@ -83,6 +72,17 @@ SIGNAL : TOC TOC TOC`,
 ONLY [REDACTED] CLOTHES AUTHORIZED
 [REDACTED] DUPONT DE LIGONNÈS SPAWNING
 OPEN EPSTEIN LIMOUSIN AT [REDACTED]`,
+  },
+  {
+    id: 'event',
+    title: '7. Events',
+    image: null,
+    pdfPage: 6,
+    pdfUrl: '/epsci-files.pdf',
+    content: `ANIM : EPSTEIN ISLAND ?
+MASSAGE METHOD OPERATIONAL 
+CHAMPAIGNE BOTTLES : [REDACTED]
+SIGNAL : TOC TOC TOC`,
   },
   {
     id: 'logi',
