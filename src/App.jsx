@@ -100,11 +100,7 @@ LOLITA EXPRESS DESTINATION APPROVED.`,
     id: 'is',
     title: '10. IS',
     image: null,
-    pdfPage: 11,
-    content: `[REDACTED] INTERNATIONAL STUDENT [REDACTED]
-ALL OVER THE WORLD.
-SYSTEMS MONITORING GLOBAL PRESENCE.
-[REDACTED] BACKDOOR ACCESS GRANTED.`,
+    content: `404 EROR FILE NOT FOUND`,
   },
   {
     id: 'summary',
@@ -272,28 +268,30 @@ function App() {
                 {parseRedacted(activeFolder.content)}
               </div>
 
-              <div style={{ marginTop: '2rem', textAlign: 'center', borderTop: '1px solid #eee', paddingTop: '1rem', paddingBottom: '2rem' }}>
-                <a
-                  href={`${activeFolder.pdfUrl || '/chapter4.pdf'}${activeFolder.pdfPage ? `#page=${activeFolder.pdfPage}` : ''}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: 'inline-block',
-                    padding: '0.75rem 1.5rem',
-                    backgroundColor: 'var(--doj-blue)',
-                    color: 'white',
-                    textDecoration: 'none',
-                    fontWeight: 'bold',
-                    fontSize: '0.9rem',
-                    letterSpacing: '1px',
-                    border: '1px solid #111'
-                  }}
-                >
-                  {activeFolder.pdfPage
-                    ? `[ EXAMINE ORIGINAL DOCUMENT - PAGE ${activeFolder.pdfPage} ]`
-                    : '[ EXAMINE FULL MASTER DOCUMENT ]'}
-                </a>
-              </div>
+              {activeFolder.pdfUrl && (
+                <div style={{ marginTop: '2rem', textAlign: 'center', borderTop: '1px solid #eee', paddingTop: '1rem', paddingBottom: '2rem' }}>
+                  <a
+                    href={`${activeFolder.pdfUrl}${activeFolder.pdfPage ? `#page=${activeFolder.pdfPage}` : ''}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'inline-block',
+                      padding: '0.75rem 1.5rem',
+                      backgroundColor: 'var(--doj-blue)',
+                      color: 'white',
+                      textDecoration: 'none',
+                      fontWeight: 'bold',
+                      fontSize: '0.9rem',
+                      letterSpacing: '1px',
+                      border: '1px solid #111'
+                    }}
+                  >
+                    {activeFolder.pdfPage
+                      ? `[ EXAMINE ORIGINAL DOCUMENT - PAGE ${activeFolder.pdfPage} ]`
+                      : '[ EXAMINE FULL MASTER DOCUMENT ]'}
+                  </a>
+                </div>
+              )}
 
               {activeFolder.image && (
                 <div className="doc-image-container">
